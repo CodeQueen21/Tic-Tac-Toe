@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    margin: 2rem;
+}
+
+#players {
+    display: flex;
+    margin: 4rem;
+    justify-content: space-between;
+}
+
+#grid-container {
+    display: grid;
+    border: 1px black solid;
+    width: 30rem; 
+    height: 30rem;
+    margin: 0 auto;
+    grid-template-areas: 
+    "cell cell cell"
+    ;
+}
+
+.cell {
+    border: 1px solid black;
+    width: 10rem;
+    height: 10rem;
+}
+
+.cell p {
+    text-align: center;
+    margin-top: 25%;
+    font-size: 5rem;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
