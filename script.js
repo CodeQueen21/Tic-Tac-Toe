@@ -1,21 +1,127 @@
 const PLAYERONE = document.getElementById('p1');
 const PLAYERTWO = document.getElementById('p2');
+const GRID = document.getElementById('grid-container');
 const CELL = document.querySelectorAll('.cell');
-const CELLONE = document.querySelector('.one')
-const CELLTWO = document.querySelector('.two')
-const CELLTHREE = document.querySelector('.three')
-const CELLFOUR = document.querySelector('.four')
-const CELLFIVE = document.querySelector('.five')
-const CELLSIX = document.querySelector('.six')
-const CELLSEVEN = document.querySelector('.seven')
-const CELLEIGHT = document.querySelector('.eight')
-const CELLNINE = document.querySelector('.nine')
+const CELLONE = document.querySelector('.one');
+const CELLTWO = document.querySelector('.two');
+const CELLTHREE = document.querySelector('.three');
+const CELLFOUR = document.querySelector('.four');
+const CELLFIVE = document.querySelector('.five');
+const CELLSIX = document.querySelector('.six');
+const CELLSEVEN = document.querySelector('.seven');
+const CELLEIGHT = document.querySelector('.eight');
+const CELLNINE = document.querySelector('.nine');
+const RESULTBOX = document.getElementById('results');
+const GAMERESULTS = document.getElementById('result-text');
+const PLAYBTN = document.getElementById('play-again-btn');
 
 const board = [
     ["","",""],
     ["","",""],
     ["","",""]
 ];
+
+function boardChecker() {
+  if(board[0][0] === 'x' && board[0][1] === 'x' && board[0][2] === 'x') {
+           GRID.style.display = 'none';
+           RESULTBOX.style.display = 'block';
+           GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+           PLAYBTN.style.display = 'block';
+
+  } else if(board[0][0] === 'o' && board[0][1] === 'o' && board[0][2] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[1][0] === 'x' && board[1][1] === 'x' && board[1][2] === 'x') {
+           GRID.style.display = 'none';
+           RESULTBOX.style.display = 'block';
+           GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+           PLAYBTN.style.display = 'block';
+
+  } else if(board[1][0] === 'o' && board[1][1] === 'o' && board[1][2] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[2][0] === 'x' && board[2][1] === 'x' && board[2][2] === 'x') {
+           GRID.style.display = 'none';
+           RESULTBOX.style.display = 'block';
+           GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+           PLAYBTN.style.display = 'block';
+
+  } else if(board[2][0] === 'o' && board[2][1] === 'o' && board[2][2] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[0][0] === 'x' && board[1][0] === 'x' && board[2][0] === 'x') {
+          GRID.style.display = 'none';
+          RESULTBOX.style.display = 'block';
+          GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+          PLAYBTN.style.display = 'block';
+
+  } else if(board[0][0] === 'o' && board[1][0] === 'o' && board[2][0] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[0][1] === 'x' && board[1][1] === 'x' && board[2][1] === 'x') {
+         GRID.style.display = 'none';
+         RESULTBOX.style.display = 'block';
+         GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+         PLAYBTN.style.display = 'block';
+
+  } else if(board[0][1] === 'o' && board[1][1] === 'o' && board[2][1] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[0][2] === 'x' && board[1][2] === 'x' && board[2][2] === 'x') {
+        GRID.style.display = 'none';
+        RESULTBOX.style.display = 'block';
+        GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+        PLAYBTN.style.display = 'block';
+
+  } else if(board[0][2] === 'o' && board[1][2] === 'o' && board[2][2] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[0][0] === 'x' && board[1][1] === 'x' && board[2][2] === 'x') {
+        GRID.style.display = 'none';
+        RESULTBOX.style.display = 'block';
+        GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+        PLAYBTN.style.display = 'block';
+
+  } else if(board[0][0] === 'o' && board[1][1] === 'o' && board[2][2] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+
+  } else if(board[0][2] === 'x' && board[1][1] === 'x' && board[2][0] === 'x') {
+        GRID.style.display = 'none';
+        RESULTBOX.style.display = 'block';
+        GAMERESULTS.textContent = 'There are 3 X\'s in a row! Game Over';
+        PLAYBTN.style.display = 'block';
+
+  } else if(board[0][2] === 'o' && board[1][1] === 'o' && board[2][0] === 'o') {
+    GRID.style.display = 'none';
+    RESULTBOX.style.display = 'block';
+    GAMERESULTS.textContent = 'There are 3 O\'s in a row! Game Over';
+    PLAYBTN.style.display = 'block';
+    
+  } else {
+    return
+  }
+} 
 
 function playerTwoNameChecker() {
     let playerTwoName = prompt('Please select a name for player two');
@@ -77,6 +183,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                     board[0][0] = choice;
+                    boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -103,6 +210,7 @@ function playerTurnChecker(player) {
                 PLAYERONE.style.border = '1px solid orange';
               }
               board[0][1] = choice;
+              boardChecker();
             } else {
                 choice = undefined;
                 alert("you must enter X or O. Please try again");
@@ -128,6 +236,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[0][2] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -153,6 +262,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[1][0] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -178,6 +288,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[1][1] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -203,6 +314,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[1][2] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -228,6 +340,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[2][0] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -253,6 +366,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[2][1] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
@@ -278,6 +392,7 @@ function playerTurnChecker(player) {
                     PLAYERONE.style.border = '1px solid orange';
                   }
                   board[2][2] = choice;
+                  boardChecker();
                 } else {
                     choice = undefined;
                     alert("you must enter X or O. Please try again");
