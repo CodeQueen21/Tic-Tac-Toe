@@ -45,3 +45,24 @@ h2 {
 .cell:hover {
     cursor: pointer;
 }
+
+#results {
+    display: none;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+#results h2 {
+  color: red;
+  font-size: 3rem;
+}
+
+#play-again-btn {
+    display: none;
+    text-align: center;
+}
+
+button {
+    margin: 10% 0 10% 0;
+}
+
